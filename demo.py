@@ -50,4 +50,4 @@ print(f"num of trainable parameters: {model.num_params['grad']/1e6: .2f}M")
 
 tra = Trainer(model, use_amp=True, features="S", num_workers=3)
 
-tra.train(trainset, valset, batch_size=200, max_epochs=10, lr=0.001)
+tra.train(trainset, valset, batch_size=200, max_epochs=1000, lr=0.001)
