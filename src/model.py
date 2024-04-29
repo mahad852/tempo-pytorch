@@ -220,7 +220,7 @@ class TEMPO(nn.Module):
         sd = model.state_dict()
 
         # init a huggingface/transformers model
-        model_hf = GPT2LMHeadModel.from_pretrained(model_type)
+        model_hf = GPT2LMHeadModel.from_pretrained(f"openai-community/{model_type}")
         sd_hf = model_hf.state_dict()
 
         # filer out unnecessary keys and layers deeper than n_layer
